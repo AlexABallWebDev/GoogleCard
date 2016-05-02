@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Google Card</string>
+    <string name="signed_in_fmt">Success! %s</string>
+    <string name="userPhoto">User Photo</string>
+</resources>

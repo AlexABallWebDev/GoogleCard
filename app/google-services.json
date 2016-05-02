@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "12203386806",
+    "project_id": "bubbly-map-129920"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12203386806:android:825eec5461ab4a92",
+        "android_client_info": {
+          "package_name": "net.greenrivertech.alexb.googlecard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12203386806-tnq5drksp4tanlntju4asg3gkjt5si79.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.greenrivertech.alexb.googlecard",
+            "certificate_hash": "69A24F0168D7DE8DDBCD1C7E742AE7DDA6666FED"
+          }
+        },
+        {
+          "client_id": "12203386806-9mjtqet5mqgocsvr3hfvshso68ngev1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUhZWdPymGgsDzGEmNfMz1fY0zyHUcVt4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

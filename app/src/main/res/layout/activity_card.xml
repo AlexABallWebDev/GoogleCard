@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="net.greenrivertech.alexb.googlecard.CardActivity">
+
+    <ImageView
+        android:id="@+id/userPhoto"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:contentDescription="@string/userPhoto"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="5"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Testing userName"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Testing userEmail @test.com"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/userID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Testing userID 123456789"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+</LinearLayout>
