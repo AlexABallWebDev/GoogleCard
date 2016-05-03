@@ -53,13 +53,7 @@ public class SignInActivity extends AppCompatActivity implements
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
-        // Customize sign-in button. The sign-in button can be displayed in
-        // multiple sizes and color schemes. It can also be contextually
-        // rendered based on the requested scopes. For example. a red button may
-        // be displayed when Google+ scopes are requested, but a white button
-        // may be displayed when only basic profile is requested. Try adding the
-        // Scopes.PLUS_LOGIN scope to the GoogleSignInOptions to see the
-        // difference.
+        // Customize sign-in button.
         SignInButton signInButton = (SignInButton) findViewById(R.id.sign_in_button);
         if (signInButton != null) {
             signInButton.setSize(SignInButton.SIZE_STANDARD);
@@ -70,11 +64,8 @@ public class SignInActivity extends AppCompatActivity implements
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.sign_in_button:
-                signIn();
-                break;
-            // ...
+        if (v.getId() == R.id.sign_in_button) {
+            signIn();
         }
     }
 
@@ -114,7 +105,7 @@ public class SignInActivity extends AppCompatActivity implements
         String userName = acct.getDisplayName();
         String userEmail = acct.getEmail();
         String userID = acct.getId();
-        //String userPhotoURL = acct.getPhotoUrl().toString();
+        String userPhotoURL;
 
         //attach the information to the intent
         Intent cardIntent = new Intent(this, CardActivity.class);
@@ -122,8 +113,14 @@ public class SignInActivity extends AppCompatActivity implements
         cardIntent.putExtra(USER_NAME_TAG, userName);
         cardIntent.putExtra(USER_EMAIL_TAG, userEmail);
         cardIntent.putExtra(USER_ID_TAG, userID);
-        //cardIntent.putExtra(USER_PHOTO_URL_TAG, userPhotoURL);
 
+        //check if photo is not null before getting it.
+        if (acct.getPhotoUrl() != null) {
+            userPhotoURL = acct.getPhotoUrl().toString();
+            cardIntent.putExtra(USER_PHOTO_URL_TAG, userPhotoURL);
+        }
+
+        //start the activity.
         startActivity(cardIntent);
     }
 
