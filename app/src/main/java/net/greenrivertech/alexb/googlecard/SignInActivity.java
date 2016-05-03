@@ -26,6 +26,8 @@ public class SignInActivity extends AppCompatActivity implements
     public final static String USER_ID_TAG = "userID";
     public final static String USER_PHOTO_URL_TAG = "userPhotoURL";
 
+    public final static String NO_PHOTO_FOUND = "No user photo found";
+
     private static final int RC_SIGN_IN = 9001;
 
     private TextView mStatusTextView;
@@ -118,6 +120,10 @@ public class SignInActivity extends AppCompatActivity implements
         if (acct.getPhotoUrl() != null) {
             userPhotoURL = acct.getPhotoUrl().toString();
             cardIntent.putExtra(USER_PHOTO_URL_TAG, userPhotoURL);
+        }
+        else {
+            cardIntent.putExtra(USER_PHOTO_URL_TAG, NO_PHOTO_FOUND);
+            Toast.makeText(this, "no photo found", Toast.LENGTH_SHORT).show();
         }
 
         //start the activity.
