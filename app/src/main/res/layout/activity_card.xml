@@ -9,7 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="net.greenrivertech.alexb.googlecard.CardActivity">
+    tools:context="net.greenrivertech.alexb.googlecard.CardActivity"
+    android:background="#41aff7">
 
     <ImageView
         android:id="@+id/userPhoto"
@@ -19,41 +20,60 @@
         android:src="@drawable/thumb_placeholder"
         />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="256dp"
         android:orientation="vertical"
-        android:layout_marginBottom="30dp"
         android:layout_weight="5"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:gravity="top"
+        android:baselineAligned="false">
 
         <TextView
             android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Testing userName"
-            android:layout_marginBottom="20dp"/>
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="30dp"/>
 
         <TextView
             android:id="@+id/userEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Testing userEmail @test.com"
-            android:layout_marginBottom="20dp"/>
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_below="@+id/userName"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="30dp"/>
 
         <TextView
             android:id="@+id/userID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Testing userID 123456789"
-            android:layout_marginBottom="20dp"/>
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_below="@+id/userEmail"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="30dp"/>
 
         <Button
             android:id="@+id/sign_out_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:text="Sign Out"/>
+            android:text="Sign Out"
+            android:layout_gravity="bottom|right"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="20sp"
+            android:padding="20dp"
+            android:textColor="#ffffff"
+            android:background="#054bfc"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>
